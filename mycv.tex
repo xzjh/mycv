@@ -24,7 +24,7 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{setspace}
 \usepackage{array}
-\usepackage[left=0.85in,top=0.6in,right=0.85in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
 \usepackage[usenames,dvipsnames]{color}
 \definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
 \usepackage{xcolor}
@@ -63,7 +63,7 @@
 \renewcommand{\labelitemi}{$-$}
 \newcommand{\detail}[1]{{$-$ {#1}}}
 \newcommand{\period}[3]{\normalsize {#1} \hfill {#2} - {#3}}
-\newcommand{\honor}[3]{\shadedsection{{\bf #1} \hfill {#2}}\\by {\em {#3}}}
+\newcommand{\honor}[3]{\detail{{\bf #1}, {\em {#3}}\hfill {#2}}}
 %\newcommand{\organization}[2]{{\bf #1}\hfill{#2}}
 \newcommand{\organization}[3]{
 \shadedsection{
@@ -105,131 +105,70 @@
 
 \vspace{-0.5em}
 
-\begin{rSection}{Work Experience}
-  \vspace{-1.5em}
-  \item
-    \shadedsection{\period{{\bf Microsoft Research Asia (MSRA)}, {\em Beijing, P.R.~China}}{Jul.~2013}{Jan.~2014}}\\
-    {\em {\bf Engineering Intern}, Innovation Engineering Group, Mentor: Qiufeng Yin}\\
-    \detail{Participated in development of {\bf FaceSwap}, a project for swapping faces in photos, including face detection, alignment and alignment with constrains based on the latest face technologies from MSRA research teams;}\\
-    \detail{{\em See more details at {\bf FaceSwap} in {\bf Main Projects} section.}}
-\end{rSection}
-
-\vspace{-0.5em}
-
-\begin{rSection}{Main Projects}
-  \vspace{-1.5em}
-  \item
-    \shadedsection{\period{\bf FaceSwap}{Jul.~2013}{Jan.~2014}}\\
-    {\em main developer, main UI/UX designer}\\
-    \detail{An application for swapping faces in photos, and save the result to local or share to SNS;}\\
-    \detail{Developed the application, designed its user interfaces (UI) and user experience (UX) for Windows 8 app store;}\\
-    \detail{Released the application in Windows 8 app store for users to download into their Windows 8 devices (PC, Surface, etc.).}
-    
-  \item
-    \shadedsection{\period{\bf Bookit}{Jun.~2011}{Present}}\\
-    {\em project team leader, program$\&$product manager, UI/UX designer, architecture designer, main developer, project promoter}\\
-    \detail{An application to help users to get library collection information using keywords or bar code of a book, based on technology of cloud and client;}\\
-    \detail{Implemented access to over 100 libraries of universities all over China;}\\
-    \detail{Implemented support of multiple platforms: Windows Phone, Android, iOS, Chrome, Firefox;}\\
-    \detail{Publicized and promoted the app, and now there are over 20 thousand downloads, demostrating the popularity among college students in China.}
-    
-  \item
-    \shadedsection{\period{\bf NLM Parallel}{Sept.~2012}{Dec.~2012}}\\
-    {\em project team leader, program manager}\\
-    \detail{A usable application for my research result on parallel NLM algorithm with the heterogeneous computing technology based on the OpenCL framework;}\\
-    \detail{Designed the architecture of the program and implemented the communication with GPU;}\\
-    \detail{Implemented running with CPUs and GPUs from different manufacturers, and supporting multiple operating systems: Windows, Mac~OS~X and Linux.}
-    
-  \item
-    \shadedsection{\period{\bf Drug Logistics Management System based on RFID}{May.~2011}{May.~2012}}\\
-    {\em team member}\\
-    \detail{A project aimed to ensure the effectiveness and authenticity in the process of drug logistics by saving and querying drug logistics information with a unique encrypted RFID label stuck on drug package;}\\%, sponsored by National Students' Innovative Experiment Program
-    \detail{Participated in designing database, programming web interface and server backstage of the system.}
-    %\detail{Awarded ``Excellent Program'' by Xidian University.}
-
-  \item
-    \shadedsection{\period{\bf EasyActivity}{Jul.~2011}{Aug.~2011}}\\
-    {\em project team leader, program$\&$product manager, UI/UX designer, main developer}\\
-    \detail{An application designed to get information of nearby activities, sign up and bookmark them;}\\
-    \detail{Among first released Apps for Windows Phone.}
-\end{rSection}
-
-\newpage
-
-\vspace{-0.5em}
-
-\begin{rSection}{Main Honors}
-  \vspace{-1.5em}
-  \item
-    \honor{The First Prize of Microsoft Student Challenge (Top1/500+)}{Apr.~2012}{Microsoft Research Asia}\\
-    \detail{Awarded for the best performance in creative solution, UI/UX designing, market promotion and on-site demonstration in the competition of Microsoft Student Challenge 2012.}\\
-    \honor{The CCF Outstanding Undergraduate Award (Top100/100k+)}{Aug.~2013}{China Computer Federation (CCF)}\\
-    \detail{100 undergraduates are selected every year from all undergraduates majoring in computer science in China, by the most authoritative academic organization China Computer Federation (CCF) in this field.}\\
-% The winners will be sponsored to participate in China National Computer Conference (CNCC) of that year.
-    \honor{The Third Prize of Imagine Cup (Top6/100+)}{Apr.~2012}{Microsoft Corp.}\\
-    \honor{The First Prize of China Undergraduate Mathematical Contest in Modeling (CUMCM) in Shaanxi Province}{Sept.~2012}{Ministry of Education of P.R.~China}\\
-    \honor{The Excellent Program of National Students' Innovative Experiment Program}{Jun.~2012}{Xidian University}
-\end{rSection}
-
-\vspace{-0.5em}
-
-\begin{rSection}{Academic Experience}
-  \vspace{-1.5em}
-  \item
-    \shadedsection{\period{{\bf Advanced Micro Devices (AMD)---Xidian University Joint Laboratory of Heterogeneous Computing}, {\em Xi'an, P.R.~China}}{Sept.~2012}{Dec.~2012}}\\
-    {\em {\bf Parallelization of Non-local Means Denoising Algorithm}, Mentor: Prof.~Huming Zhu}\\
-    \detail{A solution for speeding up non-local means (NLM) denoising algorithm using GPU based on OpenCL parallel framework;}\\
-    \detail{Analyzed serial NLM algorithm and designed a parallel scheme to speed up the algorithm;}\\
-    \detail{Achieved a good result in high speeding up ratios: up to 600x in kernel and 400x overall.}
-  \item
-    \shadedsection{\period{{\bf Advanced Micro Devices (AMD)---Xidian University Joint Laboratory of Heterogeneous Computing}, {\em Xi'an, P.R.~China}}{Sept.~2011}{Nov.~2011}}\\
-    {\em {\bf Massive HDR Imaging based on Heterogeneous Clusters with Multi-core CPUs / GPUs}, Mentor: Prof.~Jiangtao Cui}\\
-    \detail{Proposed a scheme of task parallelism for processing a large number of images simultaneously;}\\
-    \detail{Implemented concurrency execution of High Dynamic Range Imaging (HDRI) on heterogeneous clusters consisting of dozens of graphic workstations and computing servers.}\\
-    \conference{China National Computer Conference}{Oct.~2013}
-    \detail{Sponsored by CCF for the Outstanding Undergraduate Award.}\\
-    \conference{National Annual Conference on High Performance Computing}{Oct.~2013}
-    \detail{Oral presentation for the paper {\em A Solution for Speeding up Non-local Means Denoising Algorithm by GPU}.}
-\end{rSection}
-
-\vspace{-0.5em}
-
-\begin{rSection}{Publication}
-  \vspace{-1.5em}
-    \item
-      {\bf \em Jiaheng Zhang}, Nianqi Hou, Jiazhi Xiong, Fei Xing and Huming Zhu (2013). {\bf A Solution for Speeding up Non-local Means Denoising Algorithm by GPU}. {\em HPC China (National Annual Conference on High Performance Computing).}
-\end{rSection}
-
-\vspace{-0.5em}
-
 \begin{rSection}{Skills}
   \vspace{-1.5em}
   \item
-\skill{Languages}{C, C++, C\#, Java, VB, Python, Scala, R, Matlab, PHP}\\
-\skill{Platforms}{Windows, Android, WinRT, *nix}\\
+\skill{Languages}{C, C++, C\#, Java, Python, Scala, R, Matlab, VB, PHP}\\
+\skill{Platforms}{Windows, Android, WinRT, Linux, UNIX}\\
 \skill{Tools}{Visual Studio, Git, Vim, OpenCL, Photoshop, Lightroom, \LaTeX, Microsoft Office}\\
 \skill{Other}{Photography, Team Leadership, Student Organizations, Musical Instruments}
 \end{rSection}
 
 \vspace{-0.5em}
 
-\begin{rSection}{Leadership \& Activities}
+\begin{rSection}{Work Experience}
   \vspace{-1.5em}
   \item
-    \organization{Chairman}{Microsoft Technology Club (MSTC) in Xidian Univ.}{Jul.~2012 - Jun.~2013}
-    %\detail{The club was created by Microsoft aimed to promote technical exchange between top universities and Microsoft, which is ranked 1st among all the MSTCs in 30 universities all over China;}\\
-    \detail{Processed daily work of the club, organized technical lectures, exchange meetings and academic competitions in the university.}\\
-    %\detail{Awarded the honor of ``Excellent Club Officer'' by MSRA for the club was {\bf ranked 1st} among all the MSTCs in 30 universities all over China.}\\
-    %\shadedsection{\organization{Association for Computing Machinery (ACM)}{Student member}}\\
-    %\shadedsection{\organization{Institute of Electrical and Electronics Engineers (IEEE)}{Student member}}\\
-    %\shadedsection{\organization{China Computer Federation (CCF)}{Student member}}\\
-    \organization{Lecturer}{Software Engineer Training Course}{May.~2013 - Jun.~2013}
-    \detail{Taught lessons on foundation of C\# programming language.}\\
-    \organization{Contributor}{Xidian Open Source Community}{Sept.~2011 - Apr.~2012}
-    \detail{Contributed to some open source projects.}\\
-    \organization{Officer}{Student Union in Xidian Univ.}{Sept.~2010 - Dec.~2010}
-    \detail{Worked in Public Relations Dept. to raise fundings for regular student activities in the university.}
+    \shadedsection{\period{{\bf Microsoft Research Asia (MSRA)}, {\em Beijing, P.R.~China}}{Jul.~2013}{Jan.~2014}}\\
+    {\em {\bf Engineering Intern}, Innovation Engineering Group}\\
+    \detail{Participated in development of {\bf FaceSwap}, a project for swapping faces in photos;}\\
+    \detail{Implemented face detection, automatic alignment and manual alignment with constrains based on the latest face technologies from MSRA research teams;}\\
+    \detail{Improved performance and re-designed user interface (UI) and user experience (UX);}\\
+    \detail{Tested and documented the program.}
 \end{rSection}
+
+\vspace{-0.5em}
+
+\begin{rSection}{Relevant Projects}
+  \vspace{-1.5em}
+    
+  \item
+    \shadedsection{\period{\bf Bookit}{Jun.~2011}{May.~2014}}\\
+    {\em http://bookitapp.org (Chinese), Team Leader, Designer, Developer}\\
+    An application to help users to get library collection information using keywords or bar code of a book, consisting of server backend and multiple platform clients (Windows Phone, Android, iOS, Chrome, Firefox).\\
+    \detail{Implemented to fetch data from over 100 libraries in server with PHP and MySQL;}\\
+    \detail{Developed client apps for Windows Phone and Android with C\#/XAML and Java;}\\
+    \detail{Publicized and promoted the app, leading to over 20 thousand downloads among college students in China.}
+    
+  \item
+    \shadedsection{\period{\bf NLM Parallel}{Sept.~2012}{Dec.~2012}}\\
+    An application of my research result on parallelized Non-local Means (NLM) algorithm with heterogeneous computing based on OpenCL.\\
+    \detail{Analyzed serial NLM algorithm and designed a parallel scheme to speed up the algorithm up to 600x in kernel and 400x overall;}\\
+    \detail{Designed architecture of the program and implemented communication with GPU;}\\
+    \detail{Implemented compatibility with multiple operating systems: Windows, Mac~OS~X and Linux.}
+    
+  \item
+    \shadedsection{\period{\bf Drug Logistics Management System based on RFID}{May.~2011}{May.~2012}}\\
+    \detail{Participated in designing database, programming web interface and server backend of the system with LAMP.}
+
+  \item
+    \shadedsection{\period{\bf EasyActivity}{Jul.~2011}{Aug.~2011}}\\
+    An application designed to get information of nearby activities, sign up and bookmark them;\\
+    \detail{Developed the app with C\#/XAML, among first released apps for Windows Phone.}
+\end{rSection}
+
+\vspace{-0.5em}
+
+\begin{rSection}{Main Honors}
+  \vspace{-1.5em}
+  \item
+    \honor{CCF Outstanding Undergraduate Award}{Aug.~2013}{China Computer Federation (CCF)}\\
+    \honor{First Prize of Microsoft Student Challenge}{Apr.~2012}{Microsoft Research Asia}\\
+    \honor{Third Prize of Imagine Cup (China regional)}{Apr.~2012}{Microsoft}\\
+    \honor{First Prize of China Undergraduate Mathematical Contest in Modeling}{Sept.~2012}{Ministry of Education}\\
+    \honor{Excellent Program of National Students' Innovative Experiment Program}{Jun.~2012}{Xidian University}
+\end{rSection}
+
 %\begin{rSection}{Research Interests}
 %  \vspace{-1.5em}
 %  \item
