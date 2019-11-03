@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+% Improved by:
+% Jiaheng Zhang (http://xzjh.org)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry} % Document margins
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}         % Palatino needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\newcommand{\shadedsection}[1]{
+    \setlength{\fboxsep}{0pt}
+    \colorbox{shadecolor}{%
+        \begin{minipage}{\linewidth}%
+            \vspace{0.2em}%
+            #1%
+            %\vspace{0.1em}%
+        \end{minipage}%
+    }
+}
+
+\pagestyle{empty}
+
+\newenvironment{rSection}[1]{ % 1 input argument - section name
+  \medskip
+  \hspace{-1.5em}{\color{Blue}\MakeUppercase{\large \bf {#1}}} % Section title
+  \vspace{-0.2em}
+  \medskip
+  \hrule % Horizontal line
+  \begin{list}{}{ % List for each individual item in the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
+  }
+\setlength{\itemsep}{1pt}
+  \item[]
+}{
+  \end{list}
+}
+\renewcommand{\labelitemi}{$-$}
+\newcommand{\detail}[1]{{$-$ {#1}}}
+\newcommand{\period}[3]{\normalsize {#1} \hfill {#2} - {#3}}
+\newcommand{\honor}[3]{\detail{{\bf #1}, {\em {#3}}\hfill {#2}}}
+%\newcommand{\organization}[2]{{\bf #1}\hfill{#2}}
+\newcommand{\organization}[3]{
+\shadedsection{
+    \begin{minipage}[b]{0.2\linewidth}
+        {\bf #1}
+    \end{minipage}%
+    \begin{minipage}[b]{0.8\linewidth}
+        {\bf #2} \hfill #3
+    \end{minipage}%
+}
+}
+
+\newcommand{\conference}[2]{\shadedsection{{\bf #1} \hfill {#2}}}
+
+\newcommand{\skill}[2]{{\bf #1} \detail{{#2}}}
+
+\begin{document}
+
+\begin{center}
+  {\huge \bf \color{Blue} Jiaheng Zhang}\\
+  \medskip
+  {E-mail: jsxzjh@gmail.com, Tel: +1 (213) 399-3818, https://www.linkedin.com/in/ixzjh/}
+\end{center}
+
+\begin{rSection}{Experience}
+  \vspace{-1.5em}
+  \item
+	\shadedsection{\period{{\bf LISA Group}, {\em Shanghai, P.R.China}}{Sept.~2019}{Present}}\\
+	{\em {\bf Head of Product \& Growth}}\\
+	\detail{Led product management, marketing and R\&D teams to develop products from 0 to 1;}\\
+	\detail{Conducted research to get market insights and find business opportunities in various countries in Southeast Asia;}\\
+	\detail{Made critical development timelines, product milestones, launch plans and growth strategies.}
+  \item
+    \shadedsection{\period{{\bf Facebook}, {\em Menlo Park, CA / Seattle, WA}}{Jul.~2016}{May.~2019}}\\
+    {\em {\bf Software Engineer \& Product Manager}, Music \& Video Rights team, Groups team, Video Creator Monetization team}\\
+    \detail{Led product development at all phases from scoping, designing, to implementing, improving and refactoring for Music \& Video Rights, Groups and Video Ads in Facebook;}\\
+    \detail{Worked on user growth and engagement strategies by doing user research, conducting experiments and analyzing data and metrics, leading to 30\% increase in meaningful connection in Groups;}\\
+    \detail{Led global launch of several products such as Branded Content, Groups Scheduled Posts, Groups Members Tab, Rights Manager in Creator Studio and more;}\\
+    \detail{Mentored bootcampers, junior engineers and team members to help them quickly learn and grow in the company;}\\
+    \detail{Helped recruiting by interviewing candidates and attending recruiting events in the company, conferences and schools.}
+  \item
+    \shadedsection{\period{{\bf Tencent}, {\em Shenzhen, P.R.~China}}{Mar.~2014}{Dec.~2018}}\\
+    {\em {\bf Engineering Consultant}, Technology and Engineering Group (TEG)}\\
+    \detail{Scoped, designed and developed large-scale, high-concurrent, parallelized web crawling system for fetching, processing and analyzing public UGC (user generated content) from various types of websites, such as app stores, forums, Weibo, Zhihu, news websites, etc.}
+  \item
+    \shadedsection{\period{{\bf Oben}, {\em Pasadena, CA}}{Dec.~2015}{Mar.~2016}}\\
+    {\bf Research Intern}\\
+    \detail{Designed and developed AI chat robots using AIML;}\\
+    \detail{Designed and developed web crawlers to automatically fetch, process and load data (ETL model) from web pages to databases;}\\
+    \detail{Designed features, architecture and workflow for Wechat + Vizio social networking smart TV project.}
+  \item
+    \shadedsection{\period{{\bf Facebook}, {\em Seattle, WA}}{Jun.~2015}{Aug.~2015}}\\
+    {\em {\bf Software Engineer Intern}, Ads Payments Infra team}\\
+    \detail{Designed and developed internal visualization tool to show organizational hierarchy and detailed information for Atlas entities;}\\
+    \detail{Implemented automatic core data migration and improved the accuracy of billing amount for Atlas Biller.}
+  \item
+    \shadedsection{\period{{\bf Microsoft Research Asia (MSRA)}, {\em Beijing, P.R.~China}}{Jul.~2013}{Jan.~2014}}\\
+    {\em {\bf Software Engineer Intern}, Innovation Engineering Group}\\
+    \detail{Designed and developed FaceSwap, a project for swapping human faces in photos, with face detection, face alignment with/without constraints based on the latest face detection technologies from MSRA research teams;}\\
+    \detail{Improved performance and re-designed user interface (UI) and user experience (UX) in the Universal Windows Platform (UWP) App.}
+\end{rSection}
+
+\vspace{-0.5em}
+
+\begin{rSection}{Education}
+  \vspace{-1.5em}
+  \item
+    \shadedsection{\period{{\bf University of Southern California}, {\em Los Angeles, CA}}{Aug.~2014}{May.~2016}}\\
+    {\bf Master of Science}, {\em Computer Science}\\
+    \detail{8 courses including AI, NLP, Multimedia, Databases, Operation Systems, Information Retrieval;}\\
+    \detail{GPA: 3.8/4.0}
+  \item
+    \shadedsection{\period{{\bf Xidian University}, {\em Xi'an, P.R.~China}}{Aug.~2010}{Jun.~2014}}\\
+    {\bf Bachelor of Engineering}, {\em Computer Science and Technology}\\
+    \detail{37 courses covering all fundamental areas of Computer Science;}\\
+    \detail{GPA: 3.7/4.0}
+\end{rSection}
+\end{document}
